@@ -26,6 +26,8 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
 			fs = va_arg(ptr, char *);
+			if (fs == NULL)
+				fs = "(null)";
 			len = sizeof(fs) - 1;
 			write(1, fs, len);
 			count = count + len - 1;
