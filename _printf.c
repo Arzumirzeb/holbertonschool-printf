@@ -28,10 +28,10 @@ int _printf(const char *format, ...)
 			fs = va_arg(ptr, char *);
 			if (fs == NULL)
 				fs = "(null)";
-			len = sizeof(fs) - 1;
+			for (len = 0; fs[len] != '\0'; len++)
+				continue;
 			write(1, fs, len);
 			count = count + len - 1;
-			len = 0;
 			i++;
 		}
 		else if (format[i] == '%' && format[i + 1] == '%')
