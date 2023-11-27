@@ -43,6 +43,7 @@ int _printf(const char *format, ...)
 			write(1, &format[i], 1);
 		count++;
 	}
+	va_end(ptr);
 	if (count == 0)
 		exit(31);
 	return (count);
