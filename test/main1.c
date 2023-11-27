@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include <limits.h>
 #include <stdio.h>
 #include "main.h"
@@ -42,16 +41,4 @@ int main(void)
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");
     return (0);
-=======
-#include "main.h"
-#include <stdio.h>
-int main(void)
-{
-	int len;
-	char c = '$';
-	char *s = "HEY";
-	_printf("hello,%c#%s", c, s);
-	len = _printf("hey%cand%s", c, s);
-	printf("%d\n", len);
->>>>>>> 7ff840c1f8d521179c66e0daf5e8ff2bbb9a251f
 }
