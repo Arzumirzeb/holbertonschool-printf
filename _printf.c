@@ -47,6 +47,6 @@ int _printf(const char *format, ...)
 	}
 	va_end(ptr);
 	if (count == 0)
-		exit(38);
+		exit(31);
 	return (count);
 }
