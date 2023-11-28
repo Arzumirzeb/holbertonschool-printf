@@ -2,24 +2,22 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
-void tostr(int num)
+/**
+ * ptdi - print d and i
+ * @num: number
+ * Return: void
+ */
+void ptdi(int num)
 {
-<<<<<<< HEAD
-	int i, rem, len = 0, n;
-=======
 	int i, rem, len = 0;
 	unsigned int n;
->>>>>>> f7c4b75bd666e6e90dde25b081608d5eeab9465a
 	char s[11];
 
 	if (num < 0)
 	{
 		write(1, "-", 1);
 		n = -1 * num;
-<<<<<<< HEAD
-=======
 		num = -1 * num;
->>>>>>> f7c4b75bd666e6e90dde25b081608d5eeab9465a
 	}
 	else
 		n = num;
@@ -36,11 +34,7 @@ void tostr(int num)
 	}
 	s[len] = '\0';
 	for (i = len - 1; i >= 0; i--)
-<<<<<<< HEAD
-		write(1, s + len, 1);
-=======
 		write(1, s + i, 1);
->>>>>>> f7c4b75bd666e6e90dde25b081608d5eeab9465a
 }
 /**
  * _printf - print
@@ -49,7 +43,7 @@ void tostr(int num)
  */
 int _printf(const char *format, ...)
 {
-	int i, count = 0, len = 0;
+	int i, nr, count = 0, len = 0;
 	char fc;
 	char *fs;
 	va_list ptr;
@@ -58,17 +52,11 @@ int _printf(const char *format, ...)
 	for (i = 0; format != NULL && format[i] != '\0'; i++)
 	{
 		if (format[i] == '%' && format[i + 1] == 'c')
-		{
-			fc = va_arg(ptr, int);
-			write(1, &fc, 1);
-			i++;
-		}
+			fc = va_arg(ptr, int), write(1, &fc, 1), i++;
 		if (format[i] == '%' && (format[i + 1] == 'd' || format[i + 1] == 'i'))
 		{
-			int nr = va_arg(ptr, int);
-			tostr(nr);
-			count = count + 1;
-			i++;
+			nr = va_arg(ptr, int), ptdi(nr);
+			count = count + 1, i++;
 		}
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
@@ -78,14 +66,10 @@ int _printf(const char *format, ...)
 			for (len = 0; fs[len] != '\0'; len++)
 				continue;
 			write(1, fs, len);
-			count = count + len - 1;
-			i++;
+			count = count + len - 1, i++;
 		}
 		else if (format[i] == '%' && format[i + 1] == '%')
-		{
-			write(1, "%", 1);
-			i++;
-		}
+			write(1, "%", 1), i++;
 		else if (format[i] == '%' && format[i + 1] == '\0')
 			continue;
 		else
