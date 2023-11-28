@@ -4,13 +4,22 @@
 #include <unistd.h>
 void tostr(int num)
 {
+<<<<<<< HEAD
 	int i, rem, len = 0, n;
+=======
+	int i, rem, len = 0;
+	unsigned int n;
+>>>>>>> f7c4b75bd666e6e90dde25b081608d5eeab9465a
 	char s[11];
 
 	if (num < 0)
 	{
 		write(1, "-", 1);
 		n = -1 * num;
+<<<<<<< HEAD
+=======
+		num = -1 * num;
+>>>>>>> f7c4b75bd666e6e90dde25b081608d5eeab9465a
 	}
 	else
 		n = num;
@@ -27,7 +36,11 @@ void tostr(int num)
 	}
 	s[len] = '\0';
 	for (i = len - 1; i >= 0; i--)
+<<<<<<< HEAD
 		write(1, s + len, 1);
+=======
+		write(1, s + i, 1);
+>>>>>>> f7c4b75bd666e6e90dde25b081608d5eeab9465a
 }
 /**
  * _printf - print

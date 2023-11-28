@@ -55,8 +55,12 @@ int main(void)
 	len = _printf("hey%cand%s", c, s);
 	printf("%d\n", len);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7ff840c1f8d521179c66e0daf5e8ff2bbb9a251f
 =======
 	return (0);
 >>>>>>> 06629b17d3e31f8f87dba33e1073c3c78f41cd28
+=======
+	return (0);
+>>>>>>> f7c4b75bd666e6e90dde25b081608d5eeab9465a
 }
