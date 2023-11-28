@@ -17,7 +17,7 @@ int ptdi(int num)
 	{
 		write(1, "-", 1);
 		n = -1 * num;
-		num = -1 * num;
+		buffer = -1 * num;
 	}
 	else
 		n = num, buffer = num;
