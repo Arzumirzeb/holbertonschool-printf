@@ -5,7 +5,9 @@ int main(void)
 	int len;
 	char c = '$';
 	char *s = "HEY";
-	_printf("hello,%c#%s", c, s);
+	int num = 5;
+	_printf("hello,%c#%s num - %d", c, s, num);
 	len = _printf("hey%cand%s", c, s);
 	printf("%d\n", len);
+	return (0);
 }
