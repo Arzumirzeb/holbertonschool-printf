@@ -11,6 +11,7 @@ int ptdi(int num)
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	unsigned int rem, len = 0, n, buffer;
 	int i;
 =======
@@ -20,12 +21,17 @@ int ptdi(int num)
 	unsigned int rem, n, buffer;
 	int i, len = 0;
 >>>>>>> 20df37ca5f21ba4e4423c334f9da726274038ef1
+=======
+	unsigned int rem, n, buffer;
+	int i, len = 0;
+>>>>>>> 1f7b637f34e7ffb64c2976b572ca0a9815a64591
 	char s[11];
 
 	if (num < 0)
 	{
 		write(1, "-", 1);
 		n = -1 * num;
+<<<<<<< HEAD
 <<<<<<< HEAD
 		num = -1 * num;
 =======
@@ -36,6 +42,9 @@ int ptdi(int num)
 		write(1, "0", 1), len = 0;
 		return (len);
 >>>>>>> 20df37ca5f21ba4e4423c334f9da726274038ef1
+=======
+		buffer = -1 * num;
+>>>>>>> 1f7b637f34e7ffb64c2976b572ca0a9815a64591
 	}
 	else
 		n = num, buffer = num;
@@ -53,7 +62,7 @@ int ptdi(int num)
 	s[len] = '\0';
 	for (i = len - 1; i >= 0; i--)
 		write(1, s + i, 1);
-	return (len);
+	return (len - 1);
 }
 /**
  * _printf - print
