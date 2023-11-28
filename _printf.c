@@ -35,7 +35,7 @@ int ptdi(int num)
 	s[len] = '\0';
 	for (i = len - 1; i >= 0; i--)
 		write(1, s + i, 1);
-	return (len);
+	return (len - 1);
 }
 /**
  * _printf - print
