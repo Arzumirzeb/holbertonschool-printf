@@ -10,18 +10,32 @@
 int ptdi(int num)
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	unsigned int rem, len = 0, n, buffer;
 	int i;
 =======
 	unsigned int i, rem, len = 0, n, buffer;
 >>>>>>> 2d3784df905a8b5c19e6256b87f02b8c98971f16
+=======
+	unsigned int rem, n, buffer;
+	int i, len = 0;
+>>>>>>> 20df37ca5f21ba4e4423c334f9da726274038ef1
 	char s[11];
 
 	if (num < 0)
 	{
 		write(1, "-", 1);
 		n = -1 * num;
+<<<<<<< HEAD
 		num = -1 * num;
+=======
+		buffer = -1 * num;
+	}
+	else if (num == 0)
+	{
+		write(1, "0", 1), len = 0;
+		return (len);
+>>>>>>> 20df37ca5f21ba4e4423c334f9da726274038ef1
 	}
 	else
 		n = num, buffer = num;

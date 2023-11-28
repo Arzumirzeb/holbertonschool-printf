@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include <limits.h>
 #include <stdio.h>
 #include "main.h"
@@ -44,9 +45,20 @@ int main(void)
     return (0);
 =======
 #include "main.h"
+=======
+>>>>>>> 20df37ca5f21ba4e4423c334f9da726274038ef1
 #include <stdio.h>
+#include <stdlib.h>
+#include "main.h"
+
+/**
+ * main - Entry point
+ *
+ * Return: 0 on success, error code otherwise
+ */
 int main(void)
 {
+<<<<<<< HEAD
 	int len;
 	char c = '$';
 	char *s = "HEY";
@@ -61,6 +73,19 @@ int main(void)
 	return (0);
 >>>>>>> 06629b17d3e31f8f87dba33e1073c3c78f41cd28
 =======
+=======
+	int len, len2;
+
+	len = _printf("%d", -1024);
+	len2 = printf("%d", -1024);
+	fflush(stdout);
+	if (len != len2)
+	{
+		printf("Lengths differ.\n");
+		fflush(stdout);
+		return (1);
+	}
+>>>>>>> 20df37ca5f21ba4e4423c334f9da726274038ef1
 	return (0);
 >>>>>>> f7c4b75bd666e6e90dde25b081608d5eeab9465a
 }

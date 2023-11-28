@@ -9,14 +9,24 @@
  */
 int ptdi(int num)
 {
+<<<<<<< HEAD
 	unsigned int i, rem, len = 0, n, beffer;
+=======
+	unsigned int rem, n, buffer;
+	int i, len = 0;
+>>>>>>> 20df37ca5f21ba4e4423c334f9da726274038ef1
 	char s[11];
 
 	if (num < 0)
 	{
 		write(1, "-", 1);
 		n = -1 * num;
-		num = -1 * num;
+		buffer = -1 * num;
+	}
+	else if (num == 0)
+	{
+		write(1, "0", 1), len = 0;
+		return (len);
 	}
 	else
 		n = num, buffer = num;
