@@ -9,7 +9,7 @@
  */
 int ptdi(int num)
 {
-	unsigned int i, rem, len = 0, n, beffer;
+	unsigned int i, rem, len = 0, n, buffer;
 	char s[11];
 
 	if (num < 0)
