@@ -9,8 +9,7 @@
  */
 int ptdi(int num)
 {
-	int i, rem, len = 0;
-	unsigned int n;
+	unsigned int i, rem, len = 0, n, beffer;
 	char s[11];
 
 	if (num < 0)
@@ -20,7 +19,7 @@ int ptdi(int num)
 		num = -1 * num;
 	}
 	else
-		n = num;
+		n = num, buffer = num;
 	while (n != 0)
 	{
 		len++;
@@ -28,8 +27,8 @@ int ptdi(int num)
 	}
 	for (i = 0; i < len; i++)
 	{
-		rem = num % 10;
-		num = num / 10;
+		rem = buffer % 10;
+		buffer = buffer / 10;
 		s[i] = rem + '0';
 	}
 	s[len] = '\0';
@@ -54,7 +53,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%' && format[i + 1] == 'c')
 			fc = va_arg(ptr, int), write(1, &fc, 1), i++;
-		else if (format[i] == '%' && (format[i + 1] == 'd' || format[i + 1] == 'i'))
+		if (format[i] == '%' && (format[i + 1] == 'd' || format[i + 1] == 'i'))
 		{
 			nr = va_arg(ptr, int), j = ptdi(nr);
 			count = count + j, i++;
