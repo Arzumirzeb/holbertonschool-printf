@@ -9,8 +9,12 @@
  */
 int ptdi(int num)
 {
+<<<<<<< HEAD
 	unsigned int rem, len = 0, n, buffer;
 	int i;
+=======
+	unsigned int i, rem, len = 0, n, buffer;
+>>>>>>> 2d3784df905a8b5c19e6256b87f02b8c98971f16
 	char s[11];
 
 	if (num < 0)
