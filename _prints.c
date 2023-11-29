@@ -6,7 +6,7 @@
 * @s: char
 * Return: a
 */
-int _prints(unsigned int a, char *s)
+int _prints(unsigned int *a, char *s)
 {
 	int i = 0;
 
@@ -18,7 +18,7 @@ int _prints(unsigned int a, char *s)
 		write(1, "l", 1);
 		write(1, "l", 1);
 		write(1, ")", 1);
-	a = a + 6;
+	(*a) += 6;
 	}
 	else
 	{
@@ -26,7 +26,7 @@ int _prints(unsigned int a, char *s)
 		{
 			write(1, (s + i), 1);
 			i++;
-			a++;
+			(*a)++;
 		}}
-	return (a);
+	return ((*a));
 }

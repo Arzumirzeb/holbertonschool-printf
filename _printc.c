@@ -6,7 +6,7 @@
  * @b: char
  * Return: a
  */
-int _printc(unsigned int a, char b)
+int _printc(unsigned int *a, char b)
 {
 	if (!b && b !='\0')
 	{
@@ -16,12 +16,12 @@ int _printc(unsigned int a, char b)
 		write(1, "l", 1);
 		write(1, "l", 1);
 		write(1, ")", 1);
-	a = a + 6;
+	*a += 6;
 	}
 	else
 	{
 		write(1, &b, 1);
-		a++;
+		(*a)++;
 	}
-	return (a);
+	return (*a);
 }
