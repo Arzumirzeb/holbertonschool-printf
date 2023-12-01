@@ -8,7 +8,15 @@
  */
 int _printc(unsigned int *a, char b)
 {
-	write(1, &b, 1);
-	(*a)++;
+	if (!b && b != '\0')
+	{
+		write(1, "(null)", 6);
+		*a += 6;
+	}
+	else
+	{
+		write(1, &b, 1);
+		(*a)++;
+	}
 	return (*a);
 }
