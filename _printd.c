@@ -3,7 +3,7 @@
 /**
  * _printd - decimal print
  * @a: len
- * @bi: num
+ * @b: num
  * Return: len
  */
 int _printd(unsigned int *a, int b)
