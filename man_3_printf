@@ -61,7 +61,7 @@ Uzeyir Alirzayev
 Haqqimizi halal etmirik!!!
 
 .SH SEE ALSO
-\fBman man\fR" > man_3_printft.1
-mv man_3_printft.1 /usr/local/man/man1/
+\fBman man\fR" > man_3_printf.1
+mv man_3_printf.1 /usr/local/man/man1/
 gzip -f /usr/local/man/man1/man_3_printf.1
-man man_3_printft
+man man_3_printf

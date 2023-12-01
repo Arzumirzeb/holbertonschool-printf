@@ -2,8 +2,8 @@
 #include <unistd.h>
 /**
  * _printd - decimal print
- * @r: len
- * @s: num
+ * @a: len
+ * @b: num
  * Return: len
  */
 int _printd(unsigned int *a, int b)

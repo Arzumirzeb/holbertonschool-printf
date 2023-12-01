@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%' && format[i + 1] == 'c')
 			c = (unsigned int)_printc(&c, va_arg(ptr, int)), i++;
-		if (format[i] == '%' && (format[i + 1] == 'd' || format[i + 1] == 'i'))
+		else if (format[i] == '%' && (format[i + 1] == 'd' || format[i + 1] == 'i'))
 		{
 			c = (unsigned int)_printd(&c, va_arg(ptr, int));
 			i++;
