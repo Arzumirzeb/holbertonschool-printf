@@ -1,3 +1,5 @@
+#!/bin/bash
+echo ".\" Manpage for printf
 .TH PRINTF 3 "2023-11-30" "Version 0.0.0.1.Open-Beta"
 
 .SH NAME
@@ -59,4 +61,7 @@ Uzeyir Alirzayev
 Haqqimizi halal etmirik!!!
 
 .SH SEE ALSO
-\fBman man\fR
+\fBman man\fR" > man_3_printft.1
+mv man_3_printft.1 /usr/local/man/man1/
+gzip -f /usr/local/man/man1/man_3_printf.1
+man man_3_printft
