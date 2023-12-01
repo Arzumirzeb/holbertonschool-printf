@@ -1,0 +1,62 @@
+.TH PRINTF 3 "2023-11-30" "Version 0.0.0.1.Open-Beta"
+
+.SH NAME
+_printf \- replaces given flags with given arguments and prints it.
+
+.SH SYNOPSIS
+\fB#include "main.h"\fR
+.br
+\fBint _printf(const char *format, ...);\fR
+
+.SH DESCRIPTION
+The \fB_printf\fR function replaces given flags with given arguments and prints result to th standart output.
+
+.SH RETURN VALUE
+Returns the number of bytes(characters) printed.
+
+.SH FORMATS
+Function supports 4 main flag, format specifiers:
+
+.TP
+\fB%%\fR
+Prints '%'.
+
+.TP
+\fB%c\fR
+Replaces it with given char argument.
+
+.TP
+\fB%s\fR
+Replaces it with given string argument
+
+.TP
+\fB%i\fR
+Replaces it with given integer argument
+
+.TP
+\fB%d\fR
+Replaces it with given decimal argument
+
+.SH EXAMPLE
+.P
+\fB_printf("Char %% has %d byte or %i bits size in %s %c", 1, 8, "32 bit system", '!');\fR
+.P
+Output:
+.P
+\fBChar % has 1 byte or 8 bits size in 32 bit system !\fR
+.P
+Return: 51
+
+.SH REPORTING BUGS
+You can contact with developers from Slack.
+
+.SH AUTHORS
+Arzu Mirzabayova
+.br
+Uzeyir Alirzayev
+
+.SH COPYRIGHTS
+Haqqimizi halal etmirik!!!
+
+.SH SEE ALSO
+\fBman man\fR
